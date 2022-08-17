@@ -10,9 +10,6 @@ class Settings(BaseSettings):
     secret_key: str
     algorithm: str
     access_token_expire_minutes: int
-    mail_username: EmailStr
-    mail_from: EmailStr
-    mail_password: str
     base_url: str
     api_key: str
     session_key: str
