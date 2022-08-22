@@ -23,6 +23,7 @@ def success_payment(request: Request, db: Session = Depends(get_db)):
     order_id = request.session.get('order_id')
     order = db.query(Order).filter_by(id=order_id).first()
     order.is_paid = True
+    
     db.commit()
     db.refresh(order)
 
